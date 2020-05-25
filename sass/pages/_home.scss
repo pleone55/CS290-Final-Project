@@ -6,7 +6,7 @@
 
 .section-subscribe {
     background-color: $color-grey-light-1;
-    padding: 0 0 15rem 0;
+    padding: 0 0 23rem 0;
     margin-top: -10rem;
 }
 
@@ -14,14 +14,50 @@
     padding: 10rem 0;
     background-image: linear-gradient(
         to right bottom, 
-        rgba($color-primary, 0.75), 
-        rgba($color-primary-light, 0.75)),
+        rgba($color-white, 0.75), 
+        rgba($color-primary-light, 0.55)),
         url(../../img/img-5.jpg);
     background-size: cover;
-    transform: skewY(-7deg);
-    margin-top: -10rem;
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    // transform: skewY(-7deg);
+    margin-top: -18rem;
 
-    & > * {
-        transform: skewY(7deg);
+    // & > * {
+    //     transform: skewY(7deg);
+    // }
+}
+
+.section-book {
+    padding: 15rem 0;
+}
+
+.book {
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url(../../img/img-4.jpg);
+    background-size: cover;
+    height: 60rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+    &-form {
+        width: 50%;
+        padding: 6rem;
+    }
+}
+
+.section-comment {
+    padding: 15rem 0;
+}
+
+.comment {
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url(../../img/comment.jpg);
+    background-size: cover;
+    height: 60rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+    &-form {
+        width: 50%;
+        padding: 6rem;
     }
 }

@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="home">
+        <nav class="navbar">
+            <ul>
+                <li><a href="subscribe.html">Subscribe</a></li>
+                <li><a href="comments.html">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#home">Home</a></li>
+            </ul>
+        </nav>
         <div class="bg-video">
             <video class="bg-video-content" autoplay muted loop>
                 <source src="img/Love-Coding.mp4" type="video/mp4" />
@@ -20,12 +28,12 @@
                 <span class="heading-primary-main">Leone Inc</span>
                 <span class="heading-primary-sub">Automating businesses</span>
             </h1>
-            <a href="#" class="btn btn-white btn-animated">Discover More</a>
+            <a href="#about" class="btn btn-white btn-animated">Discover More</a>
         </div>
     </header>
 
     <main>
-        <section class="section-about">
+        <section class="section-about" id="about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     what we do
@@ -45,7 +53,7 @@
                     <p class="paragraph">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam doloremque nisi ipsam expedita molestiae facilis quasi, voluptates blanditiis amet natus, nesciunt quae quis enim accusamus mollitia?
                     </p>
-                    <a href="#" class="btn-text">Learn more &rarr;</a>
+                    <a href="comments.html" class="btn-text">Questions &rarr;</a>
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
@@ -57,81 +65,92 @@
             </div>
         </section>
 
-        <section class="section-stories">
-            <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary-two">
-                    Making Customers Happy
-                </h2>
-            </div>
-            <div class="scroll-stories">
-                <div class="row">
-                    <div class="story">
-                        <figure class="story-shape">
-                            <img src="img/jon-doe.jpg" alt="Photo" class="story-img">
-                            <figcaption class="story-caption">
-                                Jon Doe
-                            </figcaption>
-                        </figure>
-                        <div class="story-text">
-                            <h3 class="heading-third u-margin-bottom-small">
-                                Best Service ever. Workload cutdown
-                            </h3>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem hic laborum pariatur. Assumenda tempore facilis velit eum incidunt, modi minus expedita explicabo ex, natus odio nesciunt at dolorem et corporis.
-                            </p>
-                        </div>
+        <div class="wrap">
+            <div id="arrow-left" class="arrow"></div>
+            <div id="slider">
+                <div class="slide slide1">
+                    <div class="slide-content">
+                        <span>Innovation</span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="story">
-                        <figure class="story-shape">
-                            <img src="img/jane-doe.jpg" alt="Photo" class="story-img">
-                            <figcaption class="story-caption">
-                                Jon doe
-                            </figcaption>
-                        </figure>
-                        <div class="story-text">
-                            <h3 class="heading-third u-margin-bottom-small">Really helped my business grow</h3>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem hic laborum pariatur. Assumenda tempore facilis velit eum incidunt, modi minus expedita explicabo ex, natus odio nesciunt at dolorem et corporis.
-                            </p>
-                        </div>
+                <div class="slide slide2">
+                    <div class="slide-content">
+                        <span>Teamwork</span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="story">
-                        <figure class="story-shape">
-                            <img src="img/jon-doe.jpg" alt="Photo" class="story-img">
-                            <figcaption class="story-caption">
-                                Jon doe
-                            </figcaption>
-                        </figure>
-                        <div class="story-text">
-                            <h3 class="heading-third u-margin-bottom-small">Really helped my business grow</h3>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem hic laborum pariatur. Assumenda tempore facilis velit eum incidunt, modi minus expedita explicabo ex, natus odio nesciunt at dolorem et corporis.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="story">
-                        <figure class="story-shape">
-                            <img src="img/jane-doe.jpg" alt="Photo" class="story-img">
-                            <figcaption class="story-caption">
-                                Jon doe
-                            </figcaption>
-                        </figure>
-                        <div class="story-text">
-                            <h3 class="heading-third u-margin-bottom-small">Really helped my business grow</h3>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem hic laborum pariatur. Assumenda tempore facilis velit eum incidunt, modi minus expedita explicabo ex, natus odio nesciunt at dolorem et corporis.
-                            </p>
-                        </div>
+                <div class="slide slide3">
+                    <div class="slide-content">
+                        <span>Focus</span>
                     </div>
                 </div>
             </div>
-        </section>
+            <div id="arrow-right" class="arrow"></div>
+        </div>
+
+        <script>
+            let sliderImages = document.querySelectorAll(".slide"),
+            arrowLeft = document.querySelector("#arrow-left"),
+            arrowRight = document.querySelector("#arrow-right"),
+            current = 0, i = 0, time = 4000;
+
+            // Clear all images
+            function reset() {
+                for (let i = 0; i < sliderImages.length; i++) {
+                    sliderImages[i].style.display = "none";
+                }
+            }
+
+            // Init slider
+            function startSlide() {
+                reset();                
+                sliderImages[0].style.display = "block";
+            }
+
+            //change image
+            function changeImg(){
+                for(let x = 0; x < sliderImages.length; x++){
+                    sliderImages[x].style.display = "none";
+                }
+                i++;
+                if(i > sliderImages.length) {i = 1}
+                sliderImages[i - 1].style.display = "block";
+                setTimeout("changeImg()", time);
+            }
+
+            window.onload = changeImg;
+
+            // Show prev
+            function slideLeft() {
+                reset();
+                sliderImages[current - 1].style.display = "block";
+                current--;
+            }
+
+            // Show next
+            function slideRight() {
+                reset();
+                sliderImages[current + 1].style.display = "block";
+                current++;
+            }
+
+            // Left arrow click
+            arrowLeft.addEventListener("click", function() {
+                if (current === 0) {
+                    current = sliderImages.length;
+                }
+                slideLeft();
+            });
+
+            // Right arrow click
+            arrowRight.addEventListener("click", function() {
+                if (current === sliderImages.length - 1) {
+                    current = -1;
+                }
+                slideRight();
+            });
+
+            startSlide();
+        </script>
 
         <section class="section-subscribe">
             <div class="u-center-text u-margin-bottom-big">
@@ -167,7 +186,7 @@
                                     <p class="card-price-only">Only</p>
                                     <p class="card-price-value">$299/month</p>
                                 </div>
-                                <a href="#" class="btn btn-white">Subscribe</a>
+                                <a href="subscribe.html" class="btn btn-white">Subscribe</a>
                             </div>
                         </div>
                     </div>
@@ -199,7 +218,7 @@
                                     <p class="card-price-only">Only</p>
                                     <p class="card-price-value">$499/month</p>
                                 </div>
-                                <a href="#" class="btn btn-white">Subscribe</a>
+                                <a href="subscribe.html" class="btn btn-white">Subscribe</a>
                             </div>
                         </div>
                     </div>
@@ -231,16 +250,102 @@
                                     <p class="card-price-only">Only</p>
                                     <p class="card-price-value">$699/month</p>
                                 </div>
-                                <a href="#" class="btn btn-white">Subscribe</a>
+                                <a href="subscribe.html" class="btn btn-white">Subscribe</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="u-center-text u-margin-top-big">
-                <a href="#" class="btn btn-purple">All subscriptions</a>
+        </section>
+
+        <section class="section-stories">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary-two">
+                    Making Customers Happy
+                </h2>
+            </div>
+            <div class="scroll-stories">
+                <div class="row">
+                    <div class="story">
+                        <figure class="story-shape">
+                            <img src="img/jon-doe.jpg" alt="Photo" class="story-img">
+                            <figcaption class="story-caption">
+                                Jon Doe
+                            </figcaption>
+                        </figure>
+                        <div class="story-text">
+                            <h3 class="heading-third u-margin-bottom-small">
+                                Best Service ever. Workload cutdown
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem hic laborum pariatur. Assumenda tempore facilis velit eum incidunt, modi minus expedita explicabo ex, natus odio nesciunt at dolorem et corporis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story-shape">
+                            <img src="img/jane-doe.jpg" alt="Photo" class="story-img">
+                            <figcaption class="story-caption">
+                                Jane doe
+                            </figcaption>
+                        </figure>
+                        <div class="story-text">
+                            <h3 class="heading-third u-margin-bottom-small">Really helped my business grow</h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem hic laborum pariatur. Assumenda tempore facilis velit eum incidunt, modi minus expedita explicabo ex, natus odio nesciunt at dolorem et corporis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story-shape">
+                            <img src="img/jon-doe.jpg" alt="Photo" class="story-img">
+                            <figcaption class="story-caption">
+                                Jon doe
+                            </figcaption>
+                        </figure>
+                        <div class="story-text">
+                            <h3 class="heading-third u-margin-bottom-small">Best choice I made</h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem hic laborum pariatur. Assumenda tempore facilis velit eum incidunt, modi minus expedita explicabo ex, natus odio nesciunt at dolorem et corporis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story-shape">
+                            <img src="img/jane-doe.jpg" alt="Photo" class="story-img">
+                            <figcaption class="story-caption">
+                                Jane doe
+                            </figcaption>
+                        </figure>
+                        <div class="story-text">
+                            <h3 class="heading-third u-margin-bottom-small">Kept it real</h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem hic laborum pariatur. Assumenda tempore facilis velit eum incidunt, modi minus expedita explicabo ex, natus odio nesciunt at dolorem et corporis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="row">
+                <div class="footer-navigation">
+                    <ul class="footer-list">
+                        <li class="footer-item"><a href="#home" class="footer-link">Home</a></li>
+                        <li class="footer-item"><a href="subscribe.html" class="footer-link">Subscribe</a></li>
+                        <li class="footer-item"><a href="comments.html" class="footer-link">Contact</a></li>
+                        <li class="footer-item"><a href="https://www.linkedin.com/in/paulleone1" class="footer-link">Linkedin</a></li>
+                        <li class="footer-item"><a href="https://github.com/pleone55" class="footer-link">Github</a></li>
+                    </ul>
+                </div>
+        </div>
+    </footer>
 </body>
 </html>

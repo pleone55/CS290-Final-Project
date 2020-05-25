@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="./js/comment-form.js"></script>
+    <title>Leone Inc</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar-two">
+            <ul>
+                <li><a href="subscribe.html">Subscribe</a></li>
+                <li><a href="comments.html">Contact</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-comment">
+        <div class="row">
+            <div class="comment">
+                <div class="comment-form">
+                    <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="POST" class="form">
+                        <div class="u-center-text u-margin-bottom-small">
+                            <h2 class="heading-secondary" style="margin-right: 15rem;">
+                                Leave a comment
+                            </h2>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Full Name" id="name" name="name" required>
+                            <label for="name" class="form-label">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="comment" class="form-comment" style="height: 20rem; width: 40rem;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-purple u-margin-bottom-medium" id="submit-comment-info" onclick="alertHandler()">Submit</button>
+                        </div>
+                        <script>
+                            function alertHandler() {
+                                alert("Comment successfully submitted. Thank you for your feedback!");
+                            }
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

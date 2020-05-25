@@ -1,0 +1,26 @@
+.footer {
+    background-image: linear-gradient(to right bottom, rgba($color-black, .95), rgba($color-black, .65));
+    padding: 2rem 0;
+    font-size: 1.6rem;
+
+    &-navigation {
+        text-align: center;
+    }
+
+    &-list {
+        list-style: none;
+    }
+
+    &-item {
+        display: inline-block;
+
+        &:not(:first-child) {
+            margin-left: 8rem;;
+        }
+    }
+
+    &-link {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
