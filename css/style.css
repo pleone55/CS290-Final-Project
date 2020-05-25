@@ -661,3 +661,8 @@ body {
   .comment-form {
     width: 50%;
     padding: 6rem; }
+
+.download-btn {
+  position: absolute;
+  top: 120%;
+  left: 40%; }
