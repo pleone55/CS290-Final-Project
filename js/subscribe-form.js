@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", postForm);
 function postForm() {
     document.getElementById("submit-info").addEventListener('click', function(event) {
         var req = new XMLHttpRequest();
-        var postSite = "http://httpbin.org/post";
+        var postSite = "https://httpbin.org/post";
         var payload = {
             "name": null,
             "email": null,
@@ -12,7 +12,7 @@ function postForm() {
 
         payload.name = document.getElementById("name").value;
         payload.email = document.getElementById("email").value;
-        
+
         if(document.getElementById("small").checked){
             payload.package = document.getElementById("small").value;
         } else if(document.getElementById("large").checked){
