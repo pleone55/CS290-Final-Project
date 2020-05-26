@@ -89,7 +89,7 @@
         }
     }
 
-    &-radio-input:checked ~ &-radio-btn:after {
+    &-radio-input:checked ~ &-radio-label &-radio-btn:after {
         opacity: 1;
     }
 }

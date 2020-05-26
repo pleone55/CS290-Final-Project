@@ -7,10 +7,19 @@ function postForm() {
         var payload = {
             "name": null,
             "email": null,
+            "package": null
         };
 
         payload.name = document.getElementById("name").value;
         payload.email = document.getElementById("email").value;
+        
+        if(document.getElementById("small").checked){
+            payload.package = document.getElementById("small").value;
+        } else if(document.getElementById("large").checked){
+            payload.package = document.getElementById("large").value;
+        } else {
+            payload.package = document.getElementById("large-two").value;
+        }
 
         req.open("POST", postSite, true);
         req.setRequestHeader("Content-Type", "application/json");

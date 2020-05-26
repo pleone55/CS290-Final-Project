@@ -29,27 +29,27 @@
                             </h2>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Full Name" id="name" name="name">
+                            <input type="text" class="form-input" placeholder="Full Name" id="name" name="name" required>
                             <label for="name" class="form-label">Full Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" onblur="validateEmail(this)"class="form-input" placeholder="Email" id="email" email="email" name="email">
+                            <input type="email" onblur="validateEmail(this)"class="form-input" placeholder="Email" id="email" email="email" name="email" required>
                             <label for="email" class="form-label">Email</label>
                         </div>
-                        <!-- <div class="form-group u-margin-bottom-medium">
+                        <div class="form-group u-margin-bottom-medium">
                             <div class="form-radio-group">
-                                <input type="radio" class="form-radio-input" id="small" name="size">
+                                <input type="radio" class="form-radio-input" id="small" value="Basic" name="size">
                                 <label for="small" class="form-radio-label">Basic <span class="form-radio-btn"></span></label>
                             </div>
                             <div class="form-radio-group">
-                                <input type="radio" class="form-radio-input" id="large" name="size">
+                                <input type="radio" class="form-radio-input" id="large" value="Professional" name="size">
                                 <label for="large" class="form-radio-label">Professional <span class="form-radio-btn"></span></label>
                             </div>
                             <div class="form-radio-group" style="margin-top: 3rem;">
-                                <input type="radio" class="form-radio-input" id="large-two" name="size">
+                                <input type="radio" class="form-radio-input" id="large-two" value="Enterprise" name="size">
                                 <label for="large-two" class="form-radio-label">Enterprise <span class="form-radio-btn"></span></label>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <button class="btn btn-purple" id="submit-info" onclick="successfulSubmit()">Subscribe</button>
                         </div>
