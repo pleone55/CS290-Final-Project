@@ -6,5 +6,7 @@ To Run:
 npm run compile:sass
 
 To Start Live Server:
+
 npm install live-server
+
 live-server
