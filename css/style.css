@@ -570,7 +570,7 @@ body {
   position: relative;
   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 20%, 100% 0, 100% 88%, 0 100%);
-  margin-top: -11rem; }
+  margin-top: -20rem; }
 
 .slide {
   background-size: cover;
@@ -589,13 +589,13 @@ body {
   color: #FFFFFF; }
 
 .slide1 {
-  background-image: url("../../img/morgan-richardson-ONJM0-j6XM4-unsplash.jpg"); }
+  background-image: url(../../img/morgan-richardson-ONJM0-j6XM4-unsplash.jpg); }
 
 .slide2 {
-  background-image: url("../../img/thisisengineering-raeng-lr5RHwBmrbs-unsplash.jpg"); }
+  background-image: url(../../img/thisisengineering-raeng-lr5RHwBmrbs-unsplash.jpg); }
 
 .slide3 {
-  background-image: url("../../img/luke-peters-B6JINerWMz0-unsplash.jpg"); }
+  background-image: url(../../img/luke-peters-B6JINerWMz0-unsplash.jpg); }
 
 .arrow {
   cursor: pointer;
